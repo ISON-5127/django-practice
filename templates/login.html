@@ -1,0 +1,39 @@
+{#<title>用户登录</title>#}
+{#<html>#}
+{#<h1 style="font-family:'Cooper Black'", style="font-size:200%">Service</h1>#}
+{#<script>#}
+{#    function clicke() {#}
+{#        i=1#}
+{#    }#}
+{#</script>#}
+{#username:<input type="text"/>#}
+{#<p>password:<input type="password"/></p><input type="button" onClick="window.location.r" value="提交" style="font-size:13"/>#}
+{#</html>#}
+{% csrf_token %}
+<html>
+<head>
+  <title>Login</title>
+  <script type="text/javascript">
+
+{#  function welcome() {#}
+{#    window.location.href = 'home'#}
+{#  }#}
+</script>
+</head>
+<body>
+  <h1 style="font-family: 'Cooper Black'">Login</h1>
+  {% for item in error %}
+    <p style="color:red;">{{item}}</p>
+  {% endfor %}
+
+  <form action="" method="post">
+    <table>
+      {{ form.as_table }}
+    </table>
+
+    <input type="submit" value="Login" >
+{#      onclick="welcome()" #}
+{#    <input type="button" value="Register" onclick="register()">#}
+  </form>
+</body>
+</html>

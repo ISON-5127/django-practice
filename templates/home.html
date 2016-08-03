@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+{# xmlns="http://www.w3.org/1999/html"#}
+<head>
+    <title>扣费系统-用户服务</title>
+</head>
+
+<h1 style="font-family:'Comic Sans MS'", style="font-size:200%">Welcome,{{ user }}!</h1>
+<h2>{{ counts }}</h2>
+<script>
+      function clicke() {
+{#          alert("{{ string }}");#}
+          window.open("http://127.0.0.1:8001/welcome");
+      }
+   </script>
+<table>
+    <tr>
+       <td><input type="button" onClick="clicke()" value="申请服务" style="font-size:130%"/></td>
+    </tr>
+  </table>
+<a href="/login">Logout</a>
+
+</html>
